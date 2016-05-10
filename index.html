@@ -121,8 +121,18 @@
 
 				<section data-markdown>
 					<script type="text/template">
+						## Install Plugins
+
+						```bash
+						ember install ember-i18n
+						ember install ember-moment
+						```
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
 						## Setup Plugins
-```
+```javascript
 // config/environment.js
 module.exports = function (environment)
 {
@@ -146,6 +156,7 @@ module.exports = function (environment)
 ```bash
 ember generate locale en-us
 ember generate locale pt-br
+ember generate locale es-es
 ```
 [Defining i18n translations](https://github.com/jamesarosen/ember-i18n/wiki/Doc:-Defining-Translations)
 					</script>
