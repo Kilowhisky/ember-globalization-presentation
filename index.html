@@ -115,7 +115,7 @@
 						<li><a href="https://github.com/jamesarosen/ember-i18n">ember-i18n</a> addon that is the de facto standard localizing an ember application</li>
 						<li><a href="https://github.com/stefanpenner/ember-moment">ember-moment</a> addon that helps with date localization</li>
 						<li><a href="https://github.com/jasonmit/ember-cli-moment-shim">ember-cli-moment-shim</a> if you don't like ember-moment you use this instead</li>
-						<li><a href="https://github.com/Kilowhisky/ember-i18n-csv">ember-i18n-csv</a> for exporting translations to csv so you can send them to a translator</li>
+						<li><a href="https://github.com/kellyselden/ember-i18n-csv">ember-i18n-csv</a> for exporting translations to csv so you can send them to a translator</li>
 					</ul>
 				</section>
 
@@ -437,11 +437,11 @@ landingImgUrl: Ember.computed('i18n.locale', () => {
 						## Get your files translated!
 						Export your translations to CSV if you want
 						```Bash
-						node node_modules/ember-cli-csv/to-csv.js /app/locales/ i18n.csv --only-missing
+						ember-i18n-csv to-csv --locales-path=/app/locales/ --csv-path=i18n.csv --only-missing
 						```
 						Once done you can import them back.
 						```Bash
-						node node_modules/ember-cli-csv/to-js.js i18n.csv /app/locales --merge
+						ember-i18n-csv to-js --csv-path=i18n.csv --locales-path=/app/ocales --merge
 						```
 					</script>
 				</section>
@@ -463,7 +463,7 @@ landingImgUrl: Ember.computed('i18n.locale', () => {
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
-				controls: false,
+				controls: true,
 				progress: true,
 				history: true,
 				center: true,
